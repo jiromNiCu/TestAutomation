@@ -18,61 +18,64 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.6.0</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.2.1</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
             <version>4.2.1</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
             <version>4.2.1</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
             <version>4.2.1</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>1.2.2</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.2.0</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-html</artifactId>
             <version>0.2.7</version>
-            <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>1.2.2</version>
-            <scope>import</scope>
         </dependency>
     </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources/properties</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>${envProp}.properties</include>
+                </includes>
+            </resource>
+        </resources>
+
+    </build>
+
 </project>
