@@ -13,6 +13,7 @@ public class Hooks {
         System.out.println("Before");
         drivers.chromeDriver();
         drivers.getDriver().manage().window().maximize();
+
     }
     @After
     public void afterScenario() {
